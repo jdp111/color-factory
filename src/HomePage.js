@@ -5,7 +5,7 @@ function HomePage({colors}) {
 
     return (
         <div>
-            <div>
+            <div className="title">
                 <h4>Welcome to the color factory!</h4>
                 <NavLink exact to= "/colors/new">Add a color</NavLink>
             </div>

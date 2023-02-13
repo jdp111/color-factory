@@ -7,9 +7,9 @@ function AllColors({colors}) {
     return (
         <div>
             {colors.map((color)=>(
-                <p>
+                <div>
                 <NavLink exact to={`/colors/${color.name}`}>{color.name}</NavLink> 
-                </p>
+                </div>
             ))}
         </div>
     )
