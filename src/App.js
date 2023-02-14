@@ -1,8 +1,9 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import React, { useState } from 'react'
 import HomePage from './HomePage';
 import NewColor from './NewColor';
+import Color from './Color';
 
 function App() {
 
@@ -15,7 +16,9 @@ function App() {
       <Routes>
         <Route exact path='/colors' element = {<HomePage colors = {colors}/>}></Route>
         <Route exact path='/colors/new' element = {<NewColor colors = {colors} setColors = {setColors}/>}></Route>
-
+        <Route exact path='/colors/:name' element = {<Color colors = {colors}/> }></Route>
+        <Route path='*' element={<Navigate to='/colors'/>}/>
+      
       </Routes>
     </div>
   );
